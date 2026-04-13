@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTE Fitness Wearables</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="nav-brand">BTE <span>Fitness</span></a>
+      <ul class="nav-links">
+        <li><a href="/">Shop</a></li>
+        <li><a href="/cart.html">Cart <span class="cart-badge" id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Track Every Step. From the Ankle Up.</h1>
+      <p>Discover our lineup of 20 fitness wearables — from our flagship AnkleTrack Pro to smart rings, insoles, and more.</p>
+      <a href="#products" class="hero-cta">Browse Products</a>
+    </section>
+
+    <!-- Flagship hero -->
+    <div id="flagship-hero" style="margin-bottom:2.5rem;"></div>
+
+    <h2 class="section-title" id="products">All Products</h2>
+
+    <!-- Filter bar -->
+    <div style="margin-bottom:1.25rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+      <button class="btn btn-sm btn-primary filter-btn" data-category="all">All</button>
+    </div>
+    <div id="filter-bar" style="margin-top:-1.25rem; margin-bottom:1.25rem; display:flex; gap:.75rem; flex-wrap:wrap;"></div>
+
+    <div class="product-grid" id="product-grid">
+      <div class="loading-center"><span class="spinner"></span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 BTE Fitness Wearables. All rights reserved.
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/products.js"></script>
+
+  <script src="/js/chat-widget.js"></script>
+</body>
+</html>

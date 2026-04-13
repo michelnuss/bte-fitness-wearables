@@ -1,0 +1,201 @@
+============================================================
+BTE FITNESS WEARABLES — PRODUCT CATALOG
+============================================================
+
+BTE Fitness Wearables is an online store selling 18 fitness wearable products. Our flagship product is the AnkleTrack Pro, an ankle-worn fitness monitor. We also sell smartwatches, wrist bands, smart rings, chest straps, clip-on pedometers, smart insoles, headbands, swim goggles, and more.
+
+SHIPPING INFORMATION:
+- Northeast (zip codes starting with 0–1): $4.99 base, 2–4 business days
+- Southeast (zip codes starting with 2–3): $5.99 base, 3–5 business days
+- Midwest (zip codes starting with 4–5): $6.99 base, 4–6 business days
+- Central (zip codes starting with 6–7): $7.99 base, 5–7 business days
+- West (zip codes starting with 8–9): $8.99 base, 5–8 business days
+- A weight surcharge of $1.50 per pound (beyond the first pound) is added.
+
+DISCOUNT TIERS:
+- Orders $100–$249: 5% off
+- Orders $250–$499: 10% off
+- Orders $500+: 15% off
+
+------------------------------------------------------------
+
+PRODUCT: AnkleTrack Pro
+*** FLAGSHIP PRODUCT ***
+Category: Ankle Monitor
+Price: $149.99
+Weight: 3.2 oz
+Summary: Our flagship ankle fitness monitor with GPS, step tracking, and ankle-specific biomechanics analysis.
+Details: The AnkleTrack Pro is our premium ankle-worn fitness monitor designed to capture data that wrist wearables miss. It tracks steps, distance, elevation changes, ankle rotation angles, gait symmetry, and ground contact time. Built-in GPS provides accurate route mapping for runners and hikers. Water-resistant to 50m with a 10-day battery life. Includes a medical-grade accelerometer for fall detection and post-injury rehabilitation tracking.
+Features: GPS tracking, Gait analysis, Fall detection, 10-day battery, Water-resistant 50m, Ankle biomechanics
+
+------------------------------------------------------------
+
+PRODUCT: AnkleTrack Lite
+Category: Ankle Monitor
+Price: $89.99
+Weight: 2.1 oz
+Summary: Affordable ankle monitor with step counting, basic gait tracking, and 7-day battery life.
+Details: The AnkleTrack Lite brings ankle-based fitness tracking to an accessible price point. It tracks steps, distance, and basic gait metrics including stride length and cadence. Syncs via Bluetooth to the AnkleTrack app. 7-day battery life and sweat-resistant design make it perfect for daily wear and gym sessions.
+Features: Step counting, Stride analysis, 7-day battery, Bluetooth sync, Sweat-resistant
+
+------------------------------------------------------------
+
+PRODUCT: PulseBand Ultra
+Category: Wrist Band
+Price: $199.99
+Weight: 2.8 oz
+Summary: Advanced wrist fitness band with continuous heart rate, SpO2, and stress monitoring.
+Details: The PulseBand Ultra offers hospital-grade heart rate monitoring in a sleek wrist band. Continuous SpO2 tracking, stress level analysis via HRV, and skin temperature sensing round out its health suite. AMOLED display shows real-time metrics. 5-day battery with always-on display mode.
+Features: Continuous HR, SpO2 monitoring, HRV stress tracking, Skin temperature, AMOLED display
+
+------------------------------------------------------------
+
+PRODUCT: PulseBand Core
+Category: Wrist Band
+Price: $119.99
+Weight: 1.9 oz
+Summary: Everyday wrist band with heart rate monitoring, sleep tracking, and notification alerts.
+Details: The PulseBand Core is designed for 24/7 wear. It monitors heart rate throughout the day, provides detailed sleep stage analysis, and forwards smartphone notifications to your wrist. Slim, lightweight design in multiple color options. 8-day battery life.
+Features: 24/7 heart rate, Sleep stages, Smart notifications, 8-day battery, Multiple colors
+
+------------------------------------------------------------
+
+PRODUCT: FlexWatch Sport
+Category: Smartwatch
+Price: $249.99
+Weight: 4.5 oz
+Summary: Full-featured sport smartwatch with multi-sport GPS, topographic maps, and training load analysis.
+Details: The FlexWatch Sport is built for serious athletes. Multi-band GPS ensures pinpoint accuracy. 40+ sport modes with automatic detection. Topographic maps for trail navigation. Training load and recovery advisor help prevent overtraining. Sapphire crystal display and titanium bezel withstand the toughest conditions.
+Features: Multi-band GPS, 40+ sport modes, Topo maps, Training load advisor, Sapphire crystal
+
+------------------------------------------------------------
+
+PRODUCT: FlexWatch Daily
+Category: Smartwatch
+Price: $179.99
+Weight: 3.8 oz
+Summary: Stylish everyday smartwatch with fitness tracking, NFC payments, and voice assistant.
+Details: The FlexWatch Daily blends fitness and lifestyle. Track workouts with built-in GPS, monitor heart rate and sleep, and pay with a tap using NFC. Built-in voice assistant handles quick tasks. Customizable watch faces and interchangeable bands let you match any outfit. 4-day battery life.
+Features: GPS, NFC payments, Voice assistant, Custom watch faces, 4-day battery
+
+------------------------------------------------------------
+
+PRODUCT: ChestBeat HRM
+Category: Chest Strap
+Price: $79.99
+Weight: 2.0 oz
+Summary: Chest strap heart rate monitor with broadcast to multiple devices and apps simultaneously.
+Details: The ChestBeat HRM delivers the most accurate heart rate data available from a consumer device. Dual ANT+ and Bluetooth allows simultaneous connection to your watch, phone, and gym equipment. Running dynamics sensors measure cadence, vertical oscillation, and ground contact time. Washable textile strap with 12-month battery life.
+Features: Dual ANT+/Bluetooth, Running dynamics, Multi-device broadcast, 12-month battery, Washable strap
+
+------------------------------------------------------------
+
+PRODUCT: TempRing Wellness
+Category: Smart Ring
+Price: $299.99
+Weight: 0.3 oz
+Summary: Titanium smart ring tracking sleep quality, body temperature trends, and readiness score.
+Details: The TempRing Wellness is a featherweight titanium ring that tracks what matters most for recovery. Continuous skin temperature monitoring detects trends before you feel them. Advanced sleep staging with REM, deep, and light sleep analysis. Daily readiness score tells you when to push hard and when to rest. 6-day battery life, water-resistant to 100m.
+Features: Temperature trends, Sleep staging, Readiness score, Titanium build, 6-day battery, 100m water-resistant
+
+------------------------------------------------------------
+
+PRODUCT: StrideClip Pedometer
+Category: Clip-On
+Price: $34.99
+Weight: 0.8 oz
+Summary: Simple clip-on pedometer with step count, distance, and calorie display. No phone needed.
+Details: The StrideClip Pedometer is the simplest way to track your daily movement. Clip it to your waistband, pocket, or shoe and it accurately counts steps, estimates distance, and calculates calories burned. Large e-ink display is readable in any light. No phone or app required. Runs on a single CR2032 battery for up to 12 months.
+Features: Clip-on design, E-ink display, No phone needed, 12-month battery, Calorie tracking
+
+------------------------------------------------------------
+
+PRODUCT: GymGrip Sensor
+Category: Hand Sensor
+Price: $59.99
+Weight: 1.5 oz
+Summary: Grip-mounted sensor that tracks rep counting, grip force, and workout volume for weight training.
+Details: The GymGrip Sensor wraps around any barbell, dumbbell, or pull-up bar to automatically count reps, measure grip force, and calculate total workout volume. Machine learning algorithms identify exercises and track form consistency. Syncs to the GymGrip app for workout logging and progress charts.
+Features: Auto rep counting, Grip force measurement, Exercise recognition, Workout volume tracking, Universal fit
+
+------------------------------------------------------------
+
+PRODUCT: PosturePlus Patch
+Category: Body Patch
+Price: $44.99
+Weight: 0.4 oz
+Summary: Adhesive posture sensor that vibrates gently when you slouch. Trains better posture in 2 weeks.
+Details: The PosturePlus Patch sticks to your upper back and monitors spinal alignment throughout the day. When you slouch past your calibrated threshold, a gentle vibration reminds you to straighten up. Clinical studies show improved posture in as little as 14 days of use. Rechargeable with 5-day battery life. Hypoallergenic medical-grade adhesive.
+Features: Vibration alerts, Spinal alignment tracking, 14-day posture improvement, Hypoallergenic adhesive, 5-day battery
+
+------------------------------------------------------------
+
+PRODUCT: SoleSense Insole
+Category: Smart Insole
+Price: $129.99
+Weight: 2.4 oz
+Summary: Pressure-mapping smart insoles that analyze foot strike, balance, and running form in real time.
+Details: SoleSense Insoles contain 16 pressure sensors per foot to create a real-time pressure heatmap of your foot strike. Analyze pronation, supination, heel-to-toe transition, and left-right balance. Real-time audio coaching through your earbuds helps correct form mid-run. Trim-to-fit design works with any shoe. USB-C rechargeable with 8-hour active battery.
+Features: 16 pressure sensors per foot, Real-time pressure maps, Audio coaching, Pronation analysis, Trim-to-fit, USB-C charging
+
+------------------------------------------------------------
+
+PRODUCT: HydraTrack Bottle
+Category: Smart Bottle
+Price: $39.99
+Weight: 10.0 oz
+Summary: Smart water bottle that tracks hydration intake and glows to remind you to drink.
+Details: The HydraTrack Bottle measures every sip and syncs your daily water intake to the HydraTrack app. LED ring glows when it is time to drink based on your personalized hydration goal, activity level, and local weather. Double-wall vacuum insulation keeps drinks cold for 24 hours. BPA-free Tritan plastic. 24 oz capacity.
+Features: Sip tracking, LED reminders, Weather-based goals, 24-hour insulation, BPA-free, 24 oz capacity
+
+------------------------------------------------------------
+
+PRODUCT: CalBurn Armband
+Category: Armband
+Price: $99.99
+Weight: 1.8 oz
+Summary: Upper-arm calorie tracker using skin conductivity and motion sensors for lab-grade accuracy.
+Details: The CalBurn Armband measures calories burned with near-laboratory accuracy using a combination of skin conductivity (galvanic skin response), skin temperature, heat flux, and a 3-axis accelerometer. Worn on the upper arm for unobtrusive tracking during any activity. Syncs workout data to all major fitness platforms. Rechargeable with 7-day battery life.
+Features: Lab-grade calorie accuracy, Skin conductivity sensor, Heat flux measurement, Cross-platform sync, 7-day battery
+
+------------------------------------------------------------
+
+PRODUCT: ZenBand Meditation
+Category: Headband
+Price: $159.99
+Weight: 1.2 oz
+Summary: EEG headband that measures brain activity during meditation and provides real-time calm feedback.
+Details: The ZenBand Meditation headband uses 4 EEG sensors to measure your brain's electrical activity during meditation sessions. Real-time audio feedback through gentle nature soundscapes reflects your mental state — the calmer your mind, the calmer the environment sounds. Session scores track your progress over weeks and months. Guided programs for beginners to advanced meditators.
+Features: 4 EEG sensors, Real-time audio biofeedback, Session scoring, Guided programs, Beginner to advanced
+
+------------------------------------------------------------
+
+PRODUCT: SwimForm Goggles
+Category: Smart Goggles
+Price: $189.99
+Weight: 2.2 oz
+Summary: AR swim goggles with heads-up display showing lap time, stroke count, and heart rate in real time.
+Details: SwimForm Goggles project key swim metrics directly into your field of vision through a transparent AR display. See lap time, split pace, stroke count, stroke rate, distance, and heart rate without stopping or looking at the wall clock. Open-water mode shows GPS-based navigation cues. Anti-fog coated lenses with UV protection. Compatible with prescription lens inserts.
+Features: AR heads-up display, Stroke analysis, Open-water GPS, Heart rate display, Anti-fog lenses, Rx compatible
+
+------------------------------------------------------------
+
+PRODUCT: LiftBelt Power
+Category: Smart Belt
+Price: $109.99
+Weight: 8.5 oz
+Summary: Weightlifting belt with built-in strain gauges that measure core bracing pressure and lift velocity.
+Details: The LiftBelt Power is a genuine leather weightlifting belt embedded with thin-film strain gauges and an accelerometer. It measures intra-abdominal bracing pressure to ensure proper core engagement on heavy lifts, and tracks barbell velocity to calculate power output. Real-time audio cues warn if bracing pressure drops mid-lift. Lift logging with estimated 1RM calculations.
+Features: Core bracing measurement, Barbell velocity tracking, Audio safety cues, 1RM estimation, Genuine leather, Lift logging
+
+------------------------------------------------------------
+
+PRODUCT: RecoverSleeve Compression
+Category: Smart Sleeve
+Price: $74.99
+Weight: 3.0 oz
+Summary: Compression calf sleeve with vibration therapy and muscle oxygen monitoring for recovery.
+Details: The RecoverSleeve Compression combines graduated compression with targeted vibration therapy to accelerate post-workout recovery. A near-infrared muscle oxygen (SmO2) sensor monitors how quickly your muscles recover between efforts. Three vibration intensity levels and customizable compression zones. Machine washable with electronics module removed. USB-C rechargeable.
+Features: Vibration therapy, Muscle oxygen sensing, Graduated compression, 3 intensity levels, Machine washable, USB-C charging
+
+------------------------------------------------------------

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — BTE Fitness</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="nav-brand">BTE <span>Fitness</span></a>
+      <ul class="nav-links">
+        <li><a href="/">Shop</a></li>
+        <li><a href="/cart.html">Cart <span class="cart-badge" id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Checkout</h2>
+
+    <div id="checkout-container">
+      <div class="checkout-grid">
+        <!-- Left: Forms -->
+        <div>
+          <div class="form-section">
+            <h3>Customer Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cust-name">Full Name</label>
+                <input type="text" id="cust-name" placeholder="Jane Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="cust-email">Email</label>
+                <input type="email" id="cust-email" placeholder="jane@example.com" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Shipping Address</h3>
+            <div class="form-group">
+              <label for="ship-address">Street Address</label>
+              <input type="text" id="ship-address" placeholder="123 Main St">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ship-city">City</label>
+                <input type="text" id="ship-city" placeholder="Austin">
+              </div>
+              <div class="form-group">
+                <label for="ship-state">State</label>
+                <input type="text" id="ship-state" placeholder="TX">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ship-zip">Zip Code</label>
+                <input type="text" id="ship-zip" placeholder="78701" maxlength="5">
+              </div>
+              <div class="form-group" style="display:flex; align-items:flex-end;">
+                <button class="btn btn-outline" id="calc-shipping-btn" type="button">Calculate Shipping</button>
+              </div>
+            </div>
+            <div id="shipping-result"></div>
+          </div>
+
+          <div class="form-section">
+            <h3>Payment (Simulated)</h3>
+            <div class="form-group">
+              <label for="pay-card">Card Number</label>
+              <input type="text" id="pay-card" placeholder="4242 4242 4242 4242" maxlength="19">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pay-exp">Expiry</label>
+                <input type="text" id="pay-exp" placeholder="MM/YY" maxlength="5">
+              </div>
+              <div class="form-group">
+                <label for="pay-cvc">CVC</label>
+                <input type="text" id="pay-cvc" placeholder="123" maxlength="4">
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-accent btn-lg" id="place-order-btn" style="width:100%;">Place Order</button>
+        </div>
+
+        <!-- Right: Order summary -->
+        <div class="order-summary" id="order-summary">
+          <h3>Order Summary</h3>
+          <div id="order-items"></div>
+          <div id="order-totals"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order confirmation (hidden until placed) -->
+    <div id="order-confirmation" style="display:none;"></div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 BTE Fitness Wearables. All rights reserved.
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/checkout.js"></script>
+
+  <script src="/js/chat-widget.js"></script>
+</body>
+</html>

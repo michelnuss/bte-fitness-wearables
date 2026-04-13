@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — BTE Fitness</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="nav-brand">BTE <span>Fitness</span></a>
+      <ul class="nav-links">
+        <li><a href="/">Shop</a></li>
+        <li><a href="/cart.html">Cart <span class="cart-badge" id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div style="margin-bottom:1.5rem;">
+      <a href="/">&larr; Back to all products</a>
+    </div>
+
+    <div id="product-container">
+      <div class="loading-center"><span class="spinner"></span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 BTE Fitness Wearables. All rights reserved.
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/product-detail.js"></script>
+
+  <script src="/js/chat-widget.js"></script>
+</body>
+</html>
