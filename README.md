@@ -1,12 +1,12 @@
 # BTE Fitness Wearables
 
-E-commerce style site with a FastAPI backend and static frontend. The chat assistant uses Azure AI Foundry and signs in with **Azure CLI** locally.
+E-commerce style site with a FastAPI backend and static frontend. The chat assistant uses **Google Gemini** (see **GOOGLE_CLOUD_SETUP.md**). The API key stays on the server; the browser only calls `/api/chat`.
 
 ## Prerequisites
 
 - **Python 3.10+**
-- **Azure CLI** (`az`) — required for the BTE Fitness Assistant chat (Entra ID token). [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
-- A **`.env`** file under `backend/` with your project settings (see below).
+- A **Google Gemini API key** (Google AI Studio) — see **GOOGLE_CLOUD_SETUP.md**
+- A **`backend/.env`** file with `GOOGLE_API_KEY` (see below)
 
 ## Run the app locally (step by step)
 
@@ -48,53 +48,55 @@ pip install --index-url https://pypi.org/simple/ --trusted-host pypi.org --trust
 
 ### 4. Configure environment variables
 
-Create `backend/.env` (this file is gitignored) with at least:
+1. Copy the example file:
 
-```env
-AZURE_AI_ENDPOINT=https://<your-resource>.services.ai.azure.com/api/projects/<your-project-name>
-AZURE_AGENT_ID=asst_xxxxxxxxxxxxxxxxxxxxxxxx
-```
+   ```bash
+   cp .env.example .env
+   ```
 
-Copy `AZURE_AI_ENDPOINT` and `AZURE_AGENT_ID` from **Azure AI Foundry** → your project → **Overview** / **Agents**. The chat feature does **not** use the API key for agent calls; it uses Azure identity (next step).
+2. Edit **`backend/.env`** and set your Gemini key:
 
-### 5. Sign in to Azure (needed for the chat widget)
+   ```env
+   GOOGLE_API_KEY=your_key_here
+   ```
 
-The assistant uses `DefaultAzureCredential`, which uses your **Azure CLI** login on your machine:
+Full setup (API enablement, key restrictions, optional Vertex notes) is in **GOOGLE_CLOUD_SETUP.md**.
 
-```bash
-az login
-```
-
-Use an account that has access to the Foundry project and agent.
-
-### 6. Start the server
+### 5. Start the server
 
 ```bash
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-- `--reload` restarts the server when you change Python files.
+- `--reload` restarts the server when you change Python files (needed after editing `knowledge_base.txt`).
 
-### 7. Open the site
+### 6. Open the site
 
 In your browser, go to:
 
 **http://localhost:8000**
 
-Product pages and cart work without Azure. The floating **BTE Fitness Assistant** needs steps 4–6.
+Product pages and cart work without Gemini. The floating **BTE Fitness Assistant** needs step 4.
 
 ## Troubleshooting
 
 | Issue | What to try |
 | --- | --- |
-| Chat errors about auth or 401/403 | Run `az login` again; confirm your user can open the same project in Azure AI Foundry. |
+| Chat returns a server error about `GOOGLE_API_KEY` | Ensure `backend/.env` exists and contains a valid key (see **GOOGLE_CLOUD_SETUP.md**). |
+| Model not found | Set `GEMINI_MODEL=gemini-1.5-flash` (or another model your account supports). |
 | `pip` SSL / certificate errors | Use the alternate `pip install` command in step 3, or fix certificates for your Python install (on macOS, run the “Install Certificates” command that ships with python.org installers). |
 | Port 8000 already in use | Stop the other process or run: `uvicorn app:app --host 0.0.0.0 --port 8001 --reload` and open `http://localhost:8001`. |
 
 ## Project layout
 
-- `backend/` — FastAPI app (`app.py`), `products.json`, `.env`
-- `frontend/` — HTML, CSS, JS (served by FastAPI)
+- `backend/` — FastAPI app (`app.py`), `products.json`, `knowledge_base.txt`, `.env`
+- `backend/rag_data/` — **RAG sources**: `structured/store_info.json`, `unstructured/policies_and_faq.txt`, `website/site_snapshot.md` — keep in sync with the shop; see **GCP_RAG_GUIDE.md**
+- After changing **`products.json`**, run **`python generate_knowledge_base.py`** in `backend/` so **`knowledge_base.txt`** matches the storefront.
+- `frontend/` — HTML, CSS, JS (served by FastAPI). **`/assistant.html`** — full-page AI chat (products, pricing, HQ, contact).
+- **GOOGLE_CLOUD_SETUP.md** — step-by-step Google / Gemini configuration
+- **GCP_RAG_GUIDE.md** — how website + structured + unstructured data map to GCP and this repo
+- **GCP_DEPLOY.md** — deploy the store + chat agent to **Cloud Run** (your “Google Cloud website”)
+- **VERTEX_UPLOAD_AGENT_GUIDE.md** — **Vertex AI Search + Agent Builder**: upload files / website (like Azure), index (“train”), use a hosted agent
 
 ## Publish to GitHub safely
 
@@ -102,7 +104,7 @@ Secrets must **not** appear in the repository. This project is set up so the fol
 
 | Item | Notes |
 | --- | --- |
-| `backend/.env` | Listed in `.gitignore`. Contains your Foundry endpoint and agent id. |
+| `backend/.env` | Listed in `.gitignore`. Contains `GOOGLE_API_KEY`. |
 | `deploy.zip` / `*.zip` | Ignored (deployment bundles may include credentials). |
 | API keys | Do not paste keys into code, README, or issues. Use env vars or GitHub **Secrets** for CI/CD. |
 
@@ -123,8 +125,8 @@ git push -u origin main
 
 Create the empty repository on GitHub first (**Repositories** → **New**), then run the commands above.
 
-If you ever committed a secret by mistake, remove it from git history (e.g. `git filter-repo` or BFG) and **rotate** the key in Azure.
+If you ever committed a secret by mistake, remove it from git history (e.g. `git filter-repo` or BFG) and **rotate** the key in Google Cloud.
 
-## Production (Azure)
+## Production
 
-On Azure App Service, configure the same environment variables as in `.env`, enable **managed identity** for the app, and grant that identity access to your Foundry project so the chat can obtain tokens without `az login`.
+Set **`GOOGLE_API_KEY`** (or your host’s secret equivalent) in the deployment environment. Do not expose the key to the browser. If you use **Vertex AI** with a service account instead of an AI Studio key, you will need additional code changes (see **GOOGLE_CLOUD_SETUP.md**).

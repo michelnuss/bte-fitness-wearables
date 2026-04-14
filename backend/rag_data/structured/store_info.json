@@ -1,0 +1,35 @@
+{
+  "store_name": "BTE Fitness Wearables",
+  "tagline": "Track every step — from the ankle up.",
+  "contact": {
+    "support_email": "support@btefitness.example.com",
+    "sales_email": "sales@btefitness.example.com",
+    "phone": "+1 (555) 010-0199",
+    "hours_et": "Monday–Friday 9:00 AM–6:00 PM ET; Saturday 10:00 AM–2:00 PM ET; closed Sundays and US federal holidays",
+    "response_time": "We aim to reply to email within one business day."
+  },
+  "location": {
+    "headquarters_label": "Corporate & support (course demo)",
+    "headquarters": "BTE Fitness Wearables operates customer support from the East Coast United States and São Paulo, Brazil. Fulfillment ships from a Northeast US distribution center.",
+    "ships_from": "Northeast US distribution center",
+    "regions_served": "United States only for this storefront (all 50 states). We do not ship internationally on btefitness.example.com.",
+    "retail_stores": "Online only — no physical retail stores."
+  },
+  "services": {
+    "order_support": "Order status, changes before shipment, returns, and exchanges — contact us by email or phone during business hours with your order number.",
+    "shipping": "Zone-based flat rates by the first digit of your US ZIP code, plus a weight surcharge for orders over one pound. Exact tiers and discount rules are listed in the product catalog knowledge (shipping & discount sections).",
+    "warranty": "Limited warranty against manufacturing defects on hardware. Contact support with your order number and photos if something arrives damaged or defective.",
+    "bulk_and_education": "For bulk or education pricing, email sales@btefitness.example.com with details.",
+    "accessibility": "For help using the store or large-text requests, contact support@btefitness.example.com."
+  },
+  "payment": {
+    "accepted": "Major credit and debit cards (Visa, Mastercard, American Express, Discover), Apple Pay, Google Pay where shown at checkout.",
+    "currency": "USD only.",
+    "tax": "Sales tax is estimated at checkout using your shipping ZIP code (simulated rates for demo)."
+  },
+  "policies_summary": {
+    "returns_unopened": "30 days from delivery for refund to original payment when unopened and in resellable condition.",
+    "returns_opened": "Defective items: exchange or store credit within 14 days of delivery with support approval. Non-defective opened items handled case-by-case.",
+    "privacy": "We use order and contact information to fulfill orders and respond to support. We do not sell your personal information."
+  }
+}

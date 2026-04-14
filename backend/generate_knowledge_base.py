@@ -27,13 +27,19 @@ def generate():
     lines.append("BTE FITNESS WEARABLES — PRODUCT CATALOG")
     lines.append("=" * 60)
     lines.append("")
+    n = len(products)
     lines.append(
-        "BTE Fitness Wearables is an online store selling 18 fitness "
-        "wearable products. Our flagship product is the AnkleTrack Pro, "
-        "an ankle-worn fitness monitor. We also sell smartwatches, wrist "
-        "bands, smart rings, chest straps, clip-on pedometers, smart "
-        "insoles, headbands, swim goggles, and more."
+        f"BTE Fitness Wearables is an online store selling {n} fitness "
+        "and wellness products. Our flagship product is the AnkleTrack Pro, "
+        "an ankle-worn fitness monitor. We also sell smartwatches, recovery "
+        "equipment, supplements, smart rings, chest straps, and more."
     )
+    if products:
+        top = max(products, key=lambda p: float(p["price"]))
+        lines.append(
+            f"PRICING NOTE: The highest-priced item in this catalog is "
+            f"{top['name']} at ${float(top['price']):.2f}."
+        )
     lines.append("")
     lines.append("SHIPPING INFORMATION:")
     lines.append("- Northeast (zip codes starting with 0–1): $4.99 base, 2–4 business days")

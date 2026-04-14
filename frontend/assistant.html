@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Assistant — BTE Fitness Wearables</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="assistant-page">
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="nav-brand">BTE <span>Fitness</span></a>
+      <ul class="nav-links">
+        <li><a href="/">Shop</a></li>
+        <li><a href="/assistant.html" aria-current="page">AI Assistant</a></li>
+        <li><a href="/cart.html">Cart <span class="cart-badge" id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="assistant-main">
+    <section class="assistant-hero">
+      <h1>Ask our AI about BTE Fitness</h1>
+      <p class="assistant-lead">
+        Get instant answers about <strong>products</strong>, <strong>pricing</strong>, <strong>shipping</strong>,
+        <strong>contact</strong>, and <strong>store policies</strong> — powered by your catalog and knowledge base on the server.
+      </p>
+      <p class="assistant-hint">Try one of these:</p>
+      <div class="assistant-chips" id="assistant-chips">
+        <button type="button" class="assistant-chip" data-assistant-question="What is the most expensive product?">Most expensive product</button>
+        <button type="button" class="assistant-chip" data-assistant-question="Where is your headquarters or HQ located?">Where is HQ located?</button>
+        <button type="button" class="assistant-chip" data-assistant-question="What are your shipping rates by US region?">Shipping rates</button>
+        <button type="button" class="assistant-chip" data-assistant-question="What is your support email and phone?">Contact &amp; support</button>
+      </div>
+    </section>
+
+    <div class="assistant-chat-wrap" id="assistant-chat-mount"></div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 BTE Fitness Wearables. Answers use your <code>/api/chat</code> backend (Gemini + RAG).
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/chat-widget.js"></script>
+</body>
+</html>

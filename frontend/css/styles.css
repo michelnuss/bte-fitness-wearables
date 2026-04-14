@@ -730,3 +730,68 @@ main {
 
   .nav-links { gap: 1rem; }
 }
+
+/* --- AI Assistant page (/assistant.html) --- */
+.assistant-main {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  width: 100%;
+}
+
+.assistant-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.assistant-hero h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: .75rem;
+  color: var(--clr-text);
+}
+
+.assistant-lead {
+  color: var(--clr-text-light);
+  max-width: 36rem;
+  margin: 0 auto 1rem;
+  font-size: 1rem;
+}
+
+.assistant-hint {
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  margin-bottom: .75rem;
+}
+
+.assistant-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
+  max-width: 42rem;
+  margin: 0 auto 1.5rem;
+}
+
+.assistant-chip {
+  padding: .5rem .85rem;
+  font-size: .8125rem;
+  border: 1px solid var(--clr-border);
+  border-radius: 999px;
+  background: var(--clr-surface);
+  color: var(--clr-primary);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background .15s, border-color .15s;
+}
+
+.assistant-chip:hover {
+  background: #e8f0fe;
+  border-color: var(--clr-primary);
+}
+
+.assistant-chat-wrap {
+  display: flex;
+  justify-content: center;
+}

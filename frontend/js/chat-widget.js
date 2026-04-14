@@ -1,16 +1,21 @@
 /**
- * chat-widget.js — Floating AI chat widget powered by Azure AI Foundry Agent
- * The API key is hidden on the server. This file only calls /api/chat.
+ * chat-widget.js — Floating AI chat widget (backend uses Google Gemini).
+ * The API key stays on the server; this file only calls /api/chat.
  */
 
 (function () {
   var threadId = null;
+
+  function isAssistantPage() {
+    return document.body && document.body.classList.contains("assistant-page");
+  }
 
   // -----------------------------------------------------------------------
   // Inject widget HTML
   // -----------------------------------------------------------------------
   document.addEventListener("DOMContentLoaded", function () {
     var widget = document.createElement("div");
+    widget.className = "bte-chat-widget-root";
     widget.innerHTML = [
       '<div id="chat-bubble" title="Chat with BTE Assistant">',
         '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">',
@@ -20,20 +25,49 @@
       '<div id="chat-panel">',
         '<div id="chat-header">',
           '<span>BTE Fitness Assistant</span>',
-          '<button id="chat-close">&times;</button>',
+          '<button type="button" id="chat-close" aria-label="Close">&times;</button>',
         '</div>',
         '<div id="chat-messages">',
-          '<div class="chat-msg assistant">Hi! Ask me anything about our products, pricing, or shipping.</div>',
+          '<div class="chat-msg assistant">Hi! Ask me anything about our products, pricing, shipping, contact, or HQ location.</div>',
         '</div>',
         '<div id="chat-input-row">',
-          '<input type="text" id="chat-input" placeholder="Ask a question..." autocomplete="off">',
-          '<button id="chat-send">Send</button>',
+          '<input type="text" id="chat-input" placeholder="e.g. What is the most expensive product?" autocomplete="off">',
+          '<button type="button" id="chat-send">Send</button>',
         '</div>',
       '</div>',
     ].join("");
-    document.body.appendChild(widget);
 
-    injectStyles();
+    var mount = document.getElementById("assistant-chat-mount");
+    if (mount) {
+      mount.appendChild(widget);
+    } else {
+      document.body.appendChild(widget);
+    }
+
+    injectStyles(isAssistantPage());
+
+    if (isAssistantPage()) {
+      var bubble = document.getElementById("chat-bubble");
+      var panel = document.getElementById("chat-panel");
+      var closeBtn = document.getElementById("chat-close");
+      if (bubble) bubble.style.display = "none";
+      if (panel) {
+        panel.style.display = "flex";
+        panel.classList.add("bte-chat-embedded");
+      }
+      if (closeBtn) closeBtn.style.display = "none";
+
+      document.querySelectorAll("[data-assistant-question]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var q = btn.getAttribute("data-assistant-question") || "";
+          var input = document.getElementById("chat-input");
+          if (input && q) {
+            input.value = q;
+            sendMessage();
+          }
+        });
+      });
+    }
 
     document.getElementById("chat-bubble").addEventListener("click", openChat);
     document.getElementById("chat-close").addEventListener("click", closeChat);
@@ -115,8 +149,17 @@
   // -----------------------------------------------------------------------
   // Styles (injected so no extra CSS file needed)
   // -----------------------------------------------------------------------
-  function injectStyles() {
+  function injectStyles(embedded) {
     var style = document.createElement("style");
+    var extra = embedded
+      ? [
+          "#chat-panel.bte-chat-embedded{",
+            "position:relative;bottom:auto;right:auto;width:100%;max-width:640px;height:min(70vh,520px);",
+            "min-height:420px;margin:0 auto;border-radius:14px;",
+            "box-shadow:0 4px 24px rgba(0,0,0,.08);border:1px solid #e2e8f0;",
+          "}",
+        ].join("")
+      : "";
     style.textContent = [
       "#chat-bubble{",
         "position:fixed;bottom:24px;right:24px;",
@@ -194,9 +237,10 @@
       "#chat-send:hover{background:#1558b0;}",
 
       "@media(max-width:480px){",
-        "#chat-panel{width:calc(100vw - 32px);right:16px;bottom:16px;}",
+        "#chat-panel:not(.bte-chat-embedded){width:calc(100vw - 32px);right:16px;bottom:16px;}",
         "#chat-bubble{right:16px;bottom:16px;}",
       "}",
+      extra,
     ].join("");
     document.head.appendChild(style);
   }

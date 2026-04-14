@@ -244,29 +244,141 @@ async def checkout(request: Request):
 
 
 # ---------------------------------------------------------------------------
-# AI Chat endpoint — Azure AI Foundry Agent with Entra ID auth
+# AI Chat — Google Gemini via google-genai (API key in env; knowledge_base.txt)
 # ---------------------------------------------------------------------------
 
 import re
-import time
+import uuid
+from collections import OrderedDict
 
-import requests as http_client
-from azure.identity import DefaultAzureCredential
+from google import genai
+from google.genai import types
 
-_credential = DefaultAzureCredential()
-_AI_SCOPE = "https://ai.azure.com/.default"
-_API_VERSION = "2025-05-15-preview"
+_BACKEND_ROOT = Path(__file__).parent
+_KNOWLEDGE_PATH = _BACKEND_ROOT / "knowledge_base.txt"
+_RAG_STRUCTURED = _BACKEND_ROOT / "rag_data" / "structured"
+_RAG_UNSTRUCTURED = _BACKEND_ROOT / "rag_data" / "unstructured"
+_RAG_WEBSITE = _BACKEND_ROOT / "rag_data" / "website"
+
+try:
+    with open(_KNOWLEDGE_PATH, encoding="utf-8") as _kf:
+        _KNOWLEDGE_TEXT = _kf.read()
+except OSError:
+    _KNOWLEDGE_TEXT = ""
+
+_MAX_SESSIONS = 200
+_gemini_client: genai.Client | None = None
+_CHATS: OrderedDict[str, object] = OrderedDict()
 
 
-def _get_bearer_token() -> str:
-    return _credential.get_token(_AI_SCOPE).token
+def _load_structured_rag() -> str:
+    """JSON / tabular store facts: contact, location, services."""
+    chunks: list[str] = []
+    if not _RAG_STRUCTURED.is_dir():
+        return ""
+    for path in sorted(_RAG_STRUCTURED.glob("*.json")):
+        try:
+            with open(path, encoding="utf-8") as f:
+                raw = json.load(f)
+            chunks.append(f"=== STRUCTURED ({path.name}) ===\n{json.dumps(raw, indent=2)}")
+        except (OSError, json.JSONDecodeError):
+            continue
+    return "\n\n".join(chunks)
+
+
+def _load_text_dir(label: str, directory: Path, patterns: tuple[str, ...]) -> str:
+    """Load all matching text files from a directory (unstructured or website snapshots)."""
+    if not directory.is_dir():
+        return ""
+    parts: list[str] = []
+    for pattern in patterns:
+        for path in sorted(directory.glob(pattern)):
+            try:
+                text = path.read_text(encoding="utf-8")
+                parts.append(f"=== {label}: {path.name} ===\n{text.strip()}")
+            except OSError:
+                continue
+    return "\n\n".join(parts)
+
+
+def _build_system_instruction() -> str:
+    intro = (
+        "You are a customer assistant for BTE Fitness Wearables. "
+        "Answer only using the retrieved knowledge sections below (catalog, structured store data, "
+        "unstructured policies/FAQ, and website snapshots). "
+        "Rules: (1) For product names, prices, 'most expensive', 'cheapest', and catalog counts, "
+        "trust the section 'PRODUCT CATALOG & PRICING' first — especially the PRICING NOTE line "
+        "and each PRODUCT block's Price: field. (2) For contact, HQ, shipping zones, hours, and "
+        "returns, combine catalog shipping/discount text with STRUCTURED DATA and UNSTRUCTURED FAQ. "
+        "(3) Do not invent SKUs, prices, or policies. "
+        "If something is not in the knowledge, say you do not have that information. "
+        "If the user asks about topics unrelated to BTE Fitness, say: "
+        "'I can only help with questions about BTE Fitness Wearables.'\n\n"
+    )
+
+    catalog = _KNOWLEDGE_TEXT or "(No catalog loaded.)"
+    structured = _load_structured_rag() or "(No structured JSON files.)"
+    unstructured = _load_text_dir("UNSTRUCTURED", _RAG_UNSTRUCTURED, ("*.txt", "*.md"))
+    website = _load_text_dir("WEBSITE", _RAG_WEBSITE, ("*.md", "*.txt", "*.html"))
+
+    if not unstructured:
+        unstructured = "(No unstructured files in rag_data/unstructured/.)"
+    if not website:
+        website = "(No website snapshots in rag_data/website/.)"
+
+    return (
+        f"{intro}"
+        f"=== PRODUCT CATALOG & PRICING (generated knowledge_base) ===\n{catalog}\n\n"
+        f"=== STRUCTURED DATA (contact, location, services) ===\n{structured}\n\n"
+        f"=== UNSTRUCTURED DATA (policies, FAQ, long-form text) ===\n{unstructured}\n\n"
+        f"=== WEBSITE DATA (mirrored / exported pages) ===\n{website}"
+    )
+
+
+def _get_gemini_client() -> genai.Client:
+    global _gemini_client
+    if _gemini_client is not None:
+        return _gemini_client
+
+    api_key = os.getenv("GOOGLE_API_KEY", "").strip()
+    if not api_key:
+        raise HTTPException(
+            status_code=500,
+            detail="GOOGLE_API_KEY not configured. See GOOGLE_CLOUD_SETUP.md",
+        )
+
+    # Must set vertexai=False when using an AI Studio API key. On Cloud Run / GCP,
+    # the default client can pick Application Default Credentials (OAuth) and call
+    # generativelanguage with the wrong credential type → 401 ACCESS_TOKEN_TYPE_UNSUPPORTED.
+    _gemini_client = genai.Client(api_key=api_key, vertexai=False)
+    return _gemini_client
+
+
+def _chat_config() -> types.GenerateContentConfig:
+    return types.GenerateContentConfig(system_instruction=_build_system_instruction())
+
+
+def _get_or_create_session(thread_id: str | None):
+    client = _get_gemini_client()
+    model_name = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
+    cfg = _chat_config()
+
+    if thread_id and thread_id in _CHATS:
+        _CHATS.move_to_end(thread_id)
+        return _CHATS[thread_id], thread_id
+
+    new_id = str(uuid.uuid4())
+    chat = client.chats.create(model=model_name, config=cfg)
+    _CHATS[new_id] = chat
+    while len(_CHATS) > _MAX_SESSIONS:
+        _CHATS.popitem(last=False)
+    return chat, new_id
 
 
 @app.post("/api/chat")
 async def chat(request: Request):
     """
-    Proxy chat messages to the Azure AI Foundry Agent.
-    Uses Azure Entra ID auth (az login locally, managed identity in prod).
+    Chat with Gemini using server-side API key and knowledge_base.txt.
     Payload: { "message": str, "thread_id": str (optional) }
     """
     body = await request.json()
@@ -276,73 +388,18 @@ async def chat(request: Request):
     if not user_message:
         raise HTTPException(status_code=400, detail="Message is required")
 
-    endpoint = os.getenv("AZURE_AI_ENDPOINT", "").rstrip("/")
-    agent_id = os.getenv("AZURE_AGENT_ID", "")
-
-    if not endpoint or not agent_id:
-        raise HTTPException(status_code=500, detail="AI agent not configured")
-
-    token = _get_bearer_token()
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json",
-    }
-
-    def do_request(method, path, data=None):
-        url = f"{endpoint}{path}?api-version={_API_VERSION}"
-        resp = http_client.request(method, url, headers=headers, json=data, timeout=60)
-        if not resp.ok:
-            raise HTTPException(
-                status_code=resp.status_code,
-                detail=f"Azure API error ({resp.status_code}): {resp.text}",
-            )
-        return resp.json()
-
     try:
-        # Create or reuse thread
-        if not thread_id:
-            t = do_request("POST", "/threads", {})
-            thread_id = t["id"]
-
-        # Add user message
-        do_request("POST", f"/threads/{thread_id}/messages", {
-            "role": "user",
-            "content": user_message,
-        })
-
-        # Run the agent
-        run = do_request("POST", f"/threads/{thread_id}/runs", {
-            "assistant_id": agent_id,
-        })
-        run_id = run["id"]
-
-        # Poll until complete
-        run_status = {}
-        for _ in range(30):
-            time.sleep(2)
-            run_status = do_request("GET", f"/threads/{thread_id}/runs/{run_id}")
-            if run_status["status"] in ("completed", "failed", "cancelled", "expired"):
-                break
-
-        if run_status.get("status") != "completed":
-            raise HTTPException(
-                status_code=500,
-                detail=f"Run status: {run_status.get('status', 'unknown')}",
-            )
-
-        # Get latest assistant message
-        msgs = do_request("GET", f"/threads/{thread_id}/messages")
+        session, tid = _get_or_create_session(thread_id)
+        response = session.send_message(user_message)
         reply = ""
-        for msg in msgs.get("data", []):
-            if msg["role"] == "assistant":
-                for block in msg.get("content", []):
-                    if block.get("type") == "text":
-                        reply = block["text"]["value"]
-                break
+        try:
+            reply = (getattr(response, "text", None) or "").strip()
+        except ValueError:
+            reply = "I could not generate a safe reply. Please rephrase your question."
 
-        reply = re.sub(r'【.*?】', '', reply).strip()
+        reply = re.sub(r"【.*?】", "", reply).strip()
 
-        return {"reply": reply, "thread_id": thread_id}
+        return {"reply": reply, "thread_id": tid}
 
     except HTTPException:
         raise

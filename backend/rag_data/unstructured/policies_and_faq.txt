@@ -1,0 +1,132 @@
+================================================================================
+BTE FITNESS WEARABLES — POLICIES, FAQ & SUPPORT (authoritative for the agent)
+================================================================================
+
+READ THIS FIRST — SOURCE OF TRUTH FOR PRODUCTS & PRICES
+--------------------------------------------------------------------------------
+• The full product list with **exact names and prices** is in the **PRODUCT CATALOG**
+  section of the main knowledge base (generated from our master catalog).
+• The line **"PRICING NOTE: The highest-priced item..."** in that catalog is computed
+  from the same data as the website. For "most expensive" or "cheapest" questions,
+  use that note and the per-product **Price:** lines — do not guess.
+• **Flagship product:** AnkleTrack Pro (see catalog for price and details).
+• **Catalog size:** We sell **20** products spanning wearables, supplements, apparel,
+  equipment, recovery (including sauna), and more.
+
+================================================================================
+CONTACT & LOCATION
+================================================================================
+Support email:    support@btefitness.example.com
+Sales / bulk:   sales@btefitness.example.com
+Phone:            +1 (555) 010-0199
+Hours (ET):       Mon–Fri 9:00–18:00; Sat 10:00–14:00; closed Sun & federal holidays
+
+HQ / fulfillment (demo): Customer support is US-based. Orders ship from a **Northeast US**
+distribution center. **No walk-in retail stores** — online only.
+
+**International shipping:** We do **not** ship outside the United States on this store.
+
+================================================================================
+SHIPPING & DELIVERY (aligns with catalog knowledge base)
+================================================================================
+• Rates use **zone-based** pricing by the **first digit of the US ZIP code**.
+• **Zones:** Northeast (0–1), Southeast (2–3), Midwest (4–5), Central (6–7), West (8–9).
+• Base shipping fees and **estimated business-day ranges** are listed in the catalog
+  under **SHIPPING INFORMATION**.
+• **Weight surcharge:** $1.50 per pound beyond the first pound (see catalog).
+• **Tracking:** You receive tracking by email when the order ships.
+
+================================================================================
+PRICING, DISCOUNTS & TAX (aligns with catalog)
+================================================================================
+• **Discount tiers** (subtotal before tax):  
+  – $100–$249 → 5% off  
+  – $250–$499 → 10% off  
+  – $500+ → 15% off  
+• **Currency:** USD only.  
+• **Tax:** Estimated at checkout from shipping ZIP (demo simulation).
+
+================================================================================
+ORDERS & PAYMENTS
+================================================================================
+• **Payment methods:** Major credit/debit cards; Apple Pay / Google Pay when shown.
+• **Order changes:** Address changes or cancellation only **before** shipment — contact
+  support immediately with your order number.
+• **Order status:** Email support@btefitness.example.com with order number.
+
+================================================================================
+RETURNS & EXCHANGES
+================================================================================
+• **Unopened items:** Return within **30 days** of delivery for refund to original
+  payment when unused and in resellable condition.
+• **Opened / defective:** Within **14 days** of delivery — exchange or store credit
+  for defective items; include photos and order number. Non-defective opened items
+  are handled **case-by-case** by support.
+• **Damaged in shipment:** Contact support within 48 hours of delivery with photos.
+
+================================================================================
+WARRANTY
+================================================================================
+• **Limited hardware warranty** against manufacturing defects (duration may vary by
+  product — ask support with SKU/order number).
+• **Proof:** Keep your order confirmation email.
+
+================================================================================
+PRIVACY (SUMMARY)
+================================================================================
+• We use name, email, shipping address, and payment info only to **fulfill orders**
+  and **customer support**.
+• We do **not** sell personal information to third parties for marketing (demo policy).
+
+================================================================================
+PRODUCT CATEGORIES (for “what do you sell?” questions)
+================================================================================
+Examples: **Ankle monitors**, **smartwatches**, **rings** (e.g. TempRing Wellness),
+**hydration** bottles and packets, **supplements**, **apparel**, **resistance / equipment**,
+**recovery** (compression, sauna — **HeatHaven Infrared Sauna**), **swim** wearables,
+**chest straps**, **smart insoles**, **headbands**, **pedometers**, and related accessories.
+See the **PRODUCT CATALOG** in the knowledge base for every SKU and price.
+
+================================================================================
+FAQ — COMMON QUESTIONS
+================================================================================
+
+Q: What is the most expensive product?
+A: Use the **PRICING NOTE** and **Price:** fields in the catalog — currently the
+   **HeatHaven Infrared Sauna** at the highest price in the catalog.
+
+Q: What is the cheapest or budget product?
+A: Compare the **Price:** lines across all products in the catalog (prices change only
+   when the catalog is updated).
+
+Q: What is your flagship product?
+A: **AnkleTrack Pro** (marked flagship in catalog).
+
+Q: Where is your HQ / where do you ship from?
+A: Support is US-based; shipping from **Northeast US** — see CONTACT & LOCATION above.
+
+Q: Do you ship to Hawaii / Alaska / PO boxes?
+A: Demo store assumes **US addresses**; confirm specifics with support for edge cases.
+
+Q: How long does delivery take?
+A: See **SHIPPING INFORMATION** ranges by zone in the catalog (business days).
+
+Q: How do I return something?
+A: See RETURNS & EXCHANGES; email support with order number.
+
+Q: Can I get a student or bulk discount?
+A: Email **sales@btefitness.example.com** for bulk or education inquiries.
+
+Q: Are you a medical device company?
+A: We sell **fitness and wellness** products. **Not** medical advice — consult a
+   professional for health decisions.
+
+Q: Do I need an account to order?
+A: Guest checkout is supported in this demo storefront.
+
+================================================================================
+OUT OF SCOPE (how to reply)
+================================================================================
+If the user asks about topics **not** in this document or the product catalog
+(competitors, medical diagnosis, legal advice, unrelated brands), say you can only
+help with **BTE Fitness Wearables** products, orders, shipping, and policies.

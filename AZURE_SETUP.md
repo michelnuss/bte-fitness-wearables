@@ -1,5 +1,7 @@
 # BTE Fitness Wearables — Azure & Google Cloud Setup Guide
 
+> **Chat assistant:** The in-app assistant uses **Google Gemini** (API key + `knowledge_base.txt`). Configure it with **GOOGLE_CLOUD_SETUP.md**, not Azure AI Foundry.
+
 ---
 
 ## Part A: Azure App Service Deployment
