@@ -254,7 +254,20 @@ main {
   border-radius: 4px;
 }
 
-/* Image wraps removed — text-only cards */
+.product-card-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: #f0f0f0;
+}
+
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .product-card-body {
   padding: 1.25rem 1.5rem 1.5rem;

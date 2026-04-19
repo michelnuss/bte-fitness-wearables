@@ -18,6 +18,7 @@
     "weight_oz": 18.0,
     "category": "Hydration",
     "flagship": false,
+    "image_url": "/images/HydraTrackSmartBottle.jpg",
     "short_description": "Intelligent 500ml stainless steel water bottle with LED temperature display and hydration reminders.",
     "long_description": "The HydraTrack Smart Bottle is a 500ml double-wall vacuum insulated stainless steel water bottle with an intelligent LED display built into the lid. It shows real-time water temperature and tracks your daily intake. Timed glow reminders encourage you to stay hydrated throughout the day. Keeps drinks cold for 24 hours or hot for 12 hours. BPA-free, leak-proof design perfect for the gym, office, or outdoor adventures.",
     "features": ["LED temperature display", "Hydration reminders", "500ml capacity", "Stainless steel", "24-hour cold insulation", "Leak-proof"]
@@ -29,6 +30,7 @@
     "weight_oz": 5.0,
     "category": "Recovery",
     "flagship": false,
+    "image_url": "/images/FullLegCompression.jpg",
     "short_description": "Full-length leg compression sleeve for muscle support, circulation, and post-workout recovery.",
     "long_description": "Our Full Leg Compression Sleeve provides graduated compression from thigh to ankle, promoting blood circulation and reducing muscle fatigue during and after workouts. Made from breathable, moisture-wicking fabric with anti-slip silicone bands to keep the sleeve in place. Ideal for running, basketball, weightlifting, and post-injury recovery. Available in multiple sizes for a snug, comfortable fit.",
     "features": ["Full leg coverage", "Graduated compression", "Moisture-wicking fabric", "Anti-slip silicone bands", "Breathable material", "Multiple sizes"]
@@ -40,6 +42,7 @@
     "weight_oz": 8.0,
     "category": "Supplements",
     "flagship": false,
+    "image_url": "/images/VitaBoostHydrationPackets.jpg",
     "short_description": "Multivitamin energy hydration powder packets in a variety pack with electrolytes and B-vitamins.",
     "long_description": "VitaBoost Hydration Packets are a convenient way to supercharge your water with essential vitamins and electrolytes. Each variety pack includes 30 single-serve packets in four flavors: citrus burst, berry blast, tropical punch, and lemon-lime. Formulated with B-vitamins for energy, vitamin C for immune support, and a balanced electrolyte blend for optimal hydration. Zero sugar, only 10 calories per packet. Perfect for pre-workout, post-workout, or everyday hydration.",
     "features": ["30 packets per box", "4 flavors", "Electrolyte blend", "B-vitamins", "Zero sugar", "10 calories per packet"]
@@ -51,6 +54,7 @@
     "weight_oz": 12.0,
     "category": "Supplements",
     "flagship": false,
+    "image_url": "/images/PowerSurgePreWorkout.jpg",
     "short_description": "Sports pre-workout formula with caffeine, beta-alanine, and creatine for explosive energy and focus.",
     "long_description": "PowerSurge Pre-Workout is designed for athletes who demand peak performance. Each serving delivers 200mg of natural caffeine, 3.2g of beta-alanine for endurance, 3g of creatine monohydrate for power output, and L-citrulline for enhanced blood flow and muscle pumps. No artificial colors or fillers. Mix one scoop with 8-12 oz of water 20-30 minutes before training. Available in fruit punch and blue raspberry flavors. 30 servings per container.",
     "features": ["200mg natural caffeine", "Beta-alanine", "Creatine monohydrate", "L-citrulline", "No artificial colors", "30 servings"]
@@ -62,6 +66,7 @@
     "weight_oz": 6.0,
     "category": "Apparel",
     "flagship": false,
+    "image_url": "/images/FlexFitShirt.jpg",
     "short_description": "Lightweight gym and jogging sports shirt with moisture-wicking fabric and four-way stretch.",
     "long_description": "The FlexFit Performance Shirt is engineered for active lifestyles. Made from a blend of polyester and spandex with four-way stretch for unrestricted movement during any workout. Advanced moisture-wicking technology pulls sweat away from your skin to keep you dry and comfortable. Flatlock seams prevent chafing during long runs. Reflective logo details for visibility during evening jogs. Available in six colors and sizes S through XXL.",
     "features": ["Four-way stretch", "Moisture-wicking", "Flatlock seams", "Reflective details", "6 colors", "Sizes S-XXL"]
@@ -73,6 +78,7 @@
     "weight_oz": 3.8,
     "category": "Smartwatch",
     "flagship": false,
+    "image_url": "/images/FlexWatchSport.jpg",
     "short_description": "Men's sport smartwatch with heart rate monitor, multi-sport GPS, and 5ATM water resistance.",
     "long_description": "The FlexWatch Sport is a rugged smartwatch built for serious athletes. Features a 1.43-inch AMOLED display with always-on mode, continuous heart rate and SpO2 monitoring, and multi-band GPS for accurate outdoor tracking. Supports 40+ sport modes with automatic detection. 5ATM water resistance lets you swim with confidence. Smart notifications, music control, and a 7-day battery life round out the package. Interchangeable silicone bands included.",
     "features": ["1.43-inch AMOLED", "Multi-band GPS", "40+ sport modes", "Heart rate and SpO2", "5ATM water resistance", "7-day battery"]
@@ -84,6 +90,7 @@
     "weight_oz": 1.2,
     "category": "Wrist Band",
     "flagship": false,
+    "image_url": "/images/PulseBandTracker.jpg",
     "short_description": "Slim fitness tracker with heart rate, sleep tracking, step counter, and smartphone notifications.",
     "long_description": "The PulseBand Fitness Tracker packs powerful health monitoring into a slim, lightweight design. Track your heart rate 24/7, monitor sleep stages, count steps, and measure calories burned throughout the day. Receive call, text, and app notifications right on your wrist. IP68 waterproof rating handles rain, sweat, and splashes. The 0.96-inch color touchscreen is bright and easy to read. Charges in just 1.5 hours for up to 10 days of battery life. Compatible with iOS and Android.",
     "features": ["24/7 heart rate", "Sleep tracking", "IP68 waterproof", "10-day battery", "Color touchscreen", "iOS and Android"]
@@ -95,6 +102,7 @@
     "weight_oz": 7.0,
     "category": "Recovery",
     "flagship": false,
+    "image_url": "/images/FootRoller.jpg",
     "short_description": "Textured foot massage roller for plantar fascia relief, myofascial release, and post-workout recovery.",
     "long_description": "The Myofascial Foot Massage Roller features a specially designed textured surface that targets pressure points on the sole of your foot. Roll it under your foot to relieve tension from plantar fasciitis, reduce soreness after long runs, and improve flexibility. The compact, lightweight design fits in any gym bag. Made from durable, high-density EVA foam that maintains its shape over time. Use it before workouts to warm up the feet or after to speed recovery.",
     "features": ["Textured pressure points", "Plantar fascia relief", "High-density EVA foam", "Compact and portable", "Pre and post-workout use", "Durable construction"]
@@ -106,9 +114,10 @@
     "weight_oz": 1200.0,
     "category": "Recovery",
     "flagship": false,
+    "image_url": "/images/ArcticPlungeColdTub.jpeg",
     "short_description": "Intelligent home cold plunge tub with built-in chiller, temperature control, and filtration system.",
-    "long_description": "The ArcticPlunge Cold Tub brings professional-grade cold water therapy to your home. The built-in intelligent chiller cools water down to 37°F with precise digital temperature control. A whisper-quiet pump and ozone filtration system keep the water clean for weeks without draining. The insulated barrel design retains temperature efficiently, reducing energy costs. Fits one adult comfortably. Includes a protective cover, drainage hose, and step stool. Sets up in under 30 minutes with no plumbing required.",
-    "features": ["Built-in chiller to 37°F", "Digital temperature control", "Ozone filtration", "Insulated barrel", "No plumbing required", "Whisper-quiet pump"]
+    "long_description": "The ArcticPlunge Cold Tub brings professional-grade cold water therapy to your home. The built-in intelligent chiller cools water down to 37\u00b0F with precise digital temperature control. A whisper-quiet pump and ozone filtration system keep the water clean for weeks without draining. The insulated barrel design retains temperature efficiently, reducing energy costs. Fits one adult comfortably. Includes a protective cover, drainage hose, and step stool. Sets up in under 30 minutes with no plumbing required.",
+    "features": ["Built-in chiller to 37\u00b0F", "Digital temperature control", "Ozone filtration", "Insulated barrel", "No plumbing required", "Whisper-quiet pump"]
   },
   {
     "id": 11,
@@ -117,6 +126,7 @@
     "weight_oz": 2.4,
     "category": "Smart Insole",
     "flagship": false,
+    "image_url": "/images/SmartSole.jpg",
     "short_description": "Wireless smart insoles with pressure mapping, step tracking, and real-time posture feedback via app.",
     "long_description": "SoleSense Smart Insoles use an array of thin-film pressure sensors embedded in a comfortable foam insole to map your foot pressure distribution in real time. The companion app displays step count, walking and running gait analysis, pronation and supination data, and posture alerts. Wireless Bluetooth connectivity syncs data effortlessly. Trim-to-fit design works with any shoe. USB-C rechargeable with an 8-hour active battery life. Ideal for runners, physical therapy patients, and anyone who wants to improve their movement patterns.",
     "features": ["Pressure mapping sensors", "Gait analysis", "Posture feedback via app", "Trim-to-fit", "Bluetooth sync", "USB-C rechargeable"]
@@ -128,6 +138,7 @@
     "weight_oz": 48.0,
     "category": "Recovery",
     "flagship": false,
+    "image_url": "/images/RedLight.jpg",
     "short_description": "Red and near-infrared light therapy device for muscle recovery, joint pain relief, and skin health.",
     "long_description": "The RedGlow Light Therapy Panel delivers clinically studied wavelengths of red (660nm) and near-infrared (850nm) light to promote cellular repair and reduce inflammation. Use it for 10-15 minutes per session to accelerate muscle recovery after intense workouts, ease joint stiffness, and improve skin tone and collagen production. The panel features 60 medical-grade LEDs, a built-in timer, adjustable stand, and a door-mount hook. Low EMF output and eye-safe design. FDA registered as a wellness device.",
     "features": ["660nm red + 850nm NIR", "60 medical-grade LEDs", "Built-in timer", "Adjustable stand", "Low EMF", "FDA registered"]
@@ -139,8 +150,9 @@
     "weight_oz": 4800.0,
     "category": "Recovery",
     "flagship": false,
+    "image_url": "/images/Sauna.jpg",
     "short_description": "Two-person indoor infrared sauna cabin with carbon fiber heaters, Bluetooth speakers, and chromotherapy lighting.",
-    "long_description": "The HeatHaven Infrared Sauna is a premium two-person sauna cabin built from Canadian hemlock wood. Six low-EMF carbon fiber heating panels deliver deep-penetrating infrared heat up to 150°F for effective detoxification, muscle relaxation, and stress relief. Built-in Bluetooth speakers let you enjoy music or podcasts during sessions. Chromotherapy LED lighting cycles through calming colors. Digital control panel sets temperature and session duration. Assembles in under 60 minutes with no special tools. Includes tempered glass door and interior reading light.",
+    "long_description": "The HeatHaven Infrared Sauna is a premium two-person sauna cabin built from Canadian hemlock wood. Six low-EMF carbon fiber heating panels deliver deep-penetrating infrared heat up to 150\u00b0F for effective detoxification, muscle relaxation, and stress relief. Built-in Bluetooth speakers let you enjoy music or podcasts during sessions. Chromotherapy LED lighting cycles through calming colors. Digital control panel sets temperature and session duration. Assembles in under 60 minutes with no special tools. Includes tempered glass door and interior reading light.",
     "features": ["2-person capacity", "Carbon fiber heaters", "Low-EMF", "Bluetooth speakers", "Chromotherapy LEDs", "Canadian hemlock wood"]
   },
   {
@@ -150,6 +162,7 @@
     "weight_oz": 10.0,
     "category": "Equipment",
     "flagship": false,
+    "image_url": "/images/FlexBand.jpg",
     "short_description": "Set of 5 resistance bands for physical therapy, stretching, and strength training at any fitness level.",
     "long_description": "The FlexBand Resistance Set includes five color-coded bands ranging from extra-light to extra-heavy resistance, suitable for beginners through advanced athletes. Made from natural latex with reinforced layering to prevent snapping. Use them for physical therapy exercises, warm-up stretching, yoga, pilates, and full-body strength training. Each band is 6 feet long for versatile exercise options. Comes with a mesh carry bag and a printed exercise guide with 20 illustrated workouts.",
     "features": ["5 resistance levels", "Natural latex", "Reinforced layering", "6 feet long each", "Carry bag included", "20-exercise guide"]
@@ -161,6 +174,7 @@
     "weight_oz": 5.0,
     "category": "Supplements",
     "flagship": false,
+    "image_url": "/images/MagnesiumGlycinate.jpg",
     "short_description": "High-absorption magnesium glycinate capsules for muscle relaxation, sleep support, and recovery.",
     "long_description": "MagCalm Magnesium Glycinate delivers 400mg of elemental magnesium per serving in a highly bioavailable glycinate form that is gentle on the stomach. Magnesium plays a critical role in over 300 enzymatic reactions in the body including muscle contraction, nerve function, and energy production. Take it post-workout to reduce muscle cramps and soreness, or before bed to promote restful sleep. 120 capsules per bottle, 60 servings. Third-party tested for purity. No artificial fillers, gluten-free, and vegan.",
     "features": ["400mg per serving", "High absorption glycinate", "Gentle on stomach", "120 capsules", "Third-party tested", "Vegan and gluten-free"]
@@ -172,6 +186,7 @@
     "weight_oz": 2.1,
     "category": "Ankle Monitor",
     "flagship": false,
+    "image_url": "/images/AnkleTrackLite.jpg",
     "short_description": "Affordable ankle fitness monitor with step counting, basic gait tracking, and 7-day battery life.",
     "long_description": "The AnkleTrack Lite brings ankle-based fitness tracking to an accessible price point. It tracks steps, distance, and basic gait metrics including stride length and cadence. Syncs via Bluetooth to the AnkleTrack app. 7-day battery life and sweat-resistant design make it perfect for daily wear and gym sessions. Lightweight and comfortable enough to wear all day under socks or with shorts.",
     "features": ["Step counting", "Stride analysis", "7-day battery", "Bluetooth sync", "Sweat-resistant", "Lightweight design"]
@@ -183,6 +198,7 @@
     "weight_oz": 2.0,
     "category": "Chest Strap",
     "flagship": false,
+    "image_url": "/images/ChestBeatMonitor.jpeg",
     "short_description": "Chest strap heart rate monitor with dual Bluetooth and ANT+ for gym equipment and app connectivity.",
     "long_description": "The ChestBeat Heart Rate Monitor provides the most accurate heart rate readings available from a consumer device. The chest strap design picks up electrical signals directly from the heart for medical-grade accuracy. Dual ANT+ and Bluetooth connectivity allows simultaneous pairing with your smartwatch, phone app, and gym cardio equipment. The soft textile strap is machine washable and adjustable from 25 to 50 inches. Replaceable CR2032 battery lasts up to 12 months with daily use.",
     "features": ["Medical-grade accuracy", "Dual ANT+/Bluetooth", "Machine washable strap", "12-month battery", "Adjustable 25-50 inches", "Multi-device pairing"]
@@ -194,6 +210,7 @@
     "weight_oz": 4.0,
     "category": "Equipment",
     "flagship": false,
+    "image_url": "/images/HandTrainer.jpg",
     "short_description": "Adjustable grip strength trainer with rep counter for forearm and hand rehabilitation exercises.",
     "long_description": "The GripForce Hand Trainer features an adjustable resistance range from 22 to 132 pounds, making it suitable for rehabilitation patients and serious grip athletes alike. A built-in digital counter tracks your reps automatically. The ergonomic handle is made from non-slip silicone for comfort during extended training sessions. Compact enough to use at your desk, in the car, or at the gym. Strengthens fingers, hands, and forearms for improved performance in rock climbing, tennis, golf, and everyday tasks.",
     "features": ["22-132 lb adjustable resistance", "Digital rep counter", "Ergonomic silicone grip", "Compact portable design", "Rehabilitation friendly", "No batteries needed"]
@@ -205,6 +222,7 @@
     "weight_oz": 0.3,
     "category": "Wearable",
     "flagship": false,
+    "image_url": "/images/CoreTempSmartPatch.png",
     "short_description": "Adhesive body temperature and heart rate patch for continuous health monitoring during training.",
     "long_description": "The CoreTemp Smart Patch is a discreet adhesive sensor that sticks to your chest or torso to continuously monitor core body temperature and heart rate during workouts. Designed for endurance athletes training in heat, it sends real-time alerts to your phone if your core temperature exceeds safe thresholds. The medical-grade hypoallergenic adhesive stays secure through sweat and movement. Each patch is rechargeable via a magnetic charger and lasts 72 hours per charge. IPX7 waterproof for rain and heavy perspiration.",
     "features": ["Core temperature monitoring", "Heart rate tracking", "Heat alerts", "72-hour battery", "IPX7 waterproof", "Hypoallergenic adhesive"]
@@ -216,6 +234,7 @@
     "weight_oz": 1.2,
     "category": "Wearable",
     "flagship": false,
+    "image_url": "/images/ZenBandMeditation.png",
     "short_description": "EEG headband that measures brain activity during meditation and provides real-time calm feedback.",
     "long_description": "The ZenBand Meditation Headband uses 4 EEG sensors to measure your brain's electrical activity during meditation sessions. Real-time audio feedback through gentle nature soundscapes reflects your mental state — the calmer your mind, the calmer the sounds. Session scores track your progress over weeks and months. The companion app includes guided meditation programs from beginner to advanced. Soft fabric headband is adjustable and comfortable for sessions up to 60 minutes. Rechargeable with 8-hour battery life.",
     "features": ["4 EEG sensors", "Real-time audio biofeedback", "Session scoring", "Guided programs", "Adjustable fabric band", "8-hour battery"]

@@ -86,6 +86,7 @@
       return (
         '<div class="product-card' + (p.flagship ? " flagship" : "") + '">' +
           '<a href="/product.html?id=' + p.id + '" style="text-decoration:none;color:inherit;">' +
+            (p.image_url ? '<div class="product-card-img"><img src="' + p.image_url + '" alt="' + p.name + '"></div>' : "") +
             '<div class="product-card-body">' +
               (p.flagship ? '<span class="flagship-badge" style="position:static;display:inline-block;margin-bottom:.5rem;">Flagship</span>' : "") +
               '<div class="product-card-category">' + p.category + '</div>' +
