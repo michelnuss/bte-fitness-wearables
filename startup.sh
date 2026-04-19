@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/site/wwwroot/backend
-/antenv/bin/uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000}
+cd "$(dirname "$0")"
+exec python -m uvicorn app:app --host 0.0.0.0 --port "${PORT:-8000}" --app-dir backend
