@@ -359,17 +359,24 @@ def _chat_config() -> types.GenerateContentConfig:
     return types.GenerateContentConfig(system_instruction=_build_system_instruction())
 
 
-def _get_or_create_session(thread_id: str | None):
-    client = _get_gemini_client()
-    model_name = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
-    cfg = _chat_config()
+def _model_chain() -> list[str]:
+    primary = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
+    fallbacks = ["gemini-2.5-flash-lite", "gemini-1.5-flash"]
+    chain = [primary] + [m for m in fallbacks if m != primary]
+    return chain
 
+
+def _new_chat(model_name: str):
+    return _get_gemini_client().chats.create(model=model_name, config=_chat_config())
+
+
+def _get_or_create_session(thread_id: str | None):
     if thread_id and thread_id in _CHATS:
         _CHATS.move_to_end(thread_id)
         return _CHATS[thread_id], thread_id
 
     new_id = str(uuid.uuid4())
-    chat = client.chats.create(model=model_name, config=cfg)
+    chat = _new_chat(_model_chain()[0])
     _CHATS[new_id] = chat
     while len(_CHATS) > _MAX_SESSIONS:
         _CHATS.popitem(last=False)
@@ -393,23 +400,38 @@ async def chat(request: Request):
         session, tid = _get_or_create_session(thread_id)
 
         response = None
-        for attempt in range(3):
-            try:
-                response = session.send_message(user_message)
+        last_err: Exception | None = None
+        models = _model_chain()
+
+        for model_idx, model_name in enumerate(models):
+            if model_idx > 0:
+                session = _new_chat(model_name)
+                _CHATS[tid] = session
+
+            for attempt in range(2):
+                try:
+                    response = session.send_message(user_message)
+                    break
+                except Exception as e:
+                    last_err = e
+                    msg = str(e).lower()
+                    transient = (
+                        "503" in msg
+                        or "unavailable" in msg
+                        or "overloaded" in msg
+                        or "resource_exhausted" in msg
+                        or "429" in msg
+                    )
+                    if transient and attempt == 0:
+                        time.sleep(1.5)
+                        continue
+                    break
+
+            if response is not None:
                 break
-            except Exception as e:
-                msg = str(e).lower()
-                transient = (
-                    "503" in msg
-                    or "unavailable" in msg
-                    or "overloaded" in msg
-                    or "resource_exhausted" in msg
-                    or "429" in msg
-                )
-                if transient and attempt < 2:
-                    time.sleep(1.5 * (2 ** attempt))
-                    continue
-                raise
+
+        if response is None and last_err is not None:
+            raise last_err
 
         reply = ""
         try:
