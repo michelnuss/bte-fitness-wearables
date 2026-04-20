@@ -248,6 +248,7 @@ async def checkout(request: Request):
 # ---------------------------------------------------------------------------
 
 import re
+import time
 import uuid
 from collections import OrderedDict
 
@@ -390,7 +391,26 @@ async def chat(request: Request):
 
     try:
         session, tid = _get_or_create_session(thread_id)
-        response = session.send_message(user_message)
+
+        response = None
+        for attempt in range(3):
+            try:
+                response = session.send_message(user_message)
+                break
+            except Exception as e:
+                msg = str(e).lower()
+                transient = (
+                    "503" in msg
+                    or "unavailable" in msg
+                    or "overloaded" in msg
+                    or "resource_exhausted" in msg
+                    or "429" in msg
+                )
+                if transient and attempt < 2:
+                    time.sleep(1.5 * (2 ** attempt))
+                    continue
+                raise
+
         reply = ""
         try:
             reply = (getattr(response, "text", None) or "").strip()
@@ -404,7 +424,18 @@ async def chat(request: Request):
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        msg = str(e).lower()
+        if "503" in msg or "unavailable" in msg or "overloaded" in msg:
+            raise HTTPException(
+                status_code=503,
+                detail="The assistant is temporarily busy. Please try again in a few seconds.",
+            )
+        if "429" in msg or "resource_exhausted" in msg or "quota" in msg:
+            raise HTTPException(
+                status_code=429,
+                detail="Too many requests right now. Please wait a moment and try again.",
+            )
+        raise HTTPException(status_code=500, detail="Assistant error. Please try again.")
 
 
 # ---------------------------------------------------------------------------
