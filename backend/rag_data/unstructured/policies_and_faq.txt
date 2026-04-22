@@ -16,10 +16,11 @@ READ THIS FIRST — SOURCE OF TRUTH FOR PRODUCTS & PRICES
 ================================================================================
 CONTACT & LOCATION
 ================================================================================
-Support email:    support@btefitness.example.com
-Sales / bulk:   sales@btefitness.example.com
-Phone:            +1 (555) 010-0199
-Hours (ET):       Mon–Fri 9:00–18:00; Sat 10:00–14:00; closed Sun & federal holidays
+Support email:    support@strikefitness.com
+Sales / bulk:   sales@strikefitness.com
+Phone:            +1 (800) 555-1234
+Address:          123 Fitness Way, San Francisco, CA 94102
+Hours (PST):      Mon–Fri 9:00–18:00; Sat–Sun 10:00–16:00
 
 HQ / fulfillment (demo): Customer support is US-based. Orders ship from a **Northeast US**
 distribution center. **No walk-in retail stores** — online only.
@@ -52,7 +53,7 @@ ORDERS & PAYMENTS
 • **Payment methods:** Major credit/debit cards; Apple Pay / Google Pay when shown.
 • **Order changes:** Address changes or cancellation only **before** shipment — contact
   support immediately with your order number.
-• **Order status:** Email support@btefitness.example.com with order number.
+• **Order status:** Email support@strikefitness.com with order number.
 
 ================================================================================
 RETURNS & EXCHANGES
@@ -115,7 +116,7 @@ Q: How do I return something?
 A: See RETURNS & EXCHANGES; email support with order number.
 
 Q: Can I get a student or bulk discount?
-A: Email **sales@btefitness.example.com** for bulk or education inquiries.
+A: Email **sales@strikefitness.com** for bulk or education inquiries.
 
 Q: Are you a medical device company?
 A: We sell **fitness and wellness** products. **Not** medical advice — consult a
@@ -129,4 +130,4 @@ OUT OF SCOPE (how to reply)
 ================================================================================
 If the user asks about topics **not** in this document or the product catalog
 (competitors, medical diagnosis, legal advice, unrelated brands), say you can only
-help with **BTE Fitness Wearables** products, orders, shipping, and policies.
+help with **StrikeFitness** products, orders, shipping, and policies.

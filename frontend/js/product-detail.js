@@ -15,7 +15,7 @@
 
     try {
       var p = await apiGet("/api/products/" + id);
-      document.title = p.name + " — BTE Fitness";
+      document.title = p.name + " — StrikeFitness";
       render(p);
     } catch (err) {
       document.getElementById("product-container").innerHTML =

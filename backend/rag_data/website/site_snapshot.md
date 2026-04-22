@@ -1,4 +1,4 @@
-# BTE Fitness Wearables — website content snapshot
+# StrikeFitness — website content snapshot
 
 This text mirrors what visitors see on our public marketing and support pages.
 
@@ -6,7 +6,7 @@ This text mirrors what visitors see on our public marketing and support pages.
 
 **Headline:** Track every step. From the ankle up.
 
-**Subcopy:** BTE Fitness Wearables is an online store for fitness and recovery tech — ankle monitors, smartwatches, rings, swim wearables, hydration gear, supplements, apparel, and recovery equipment including our **HeatHaven Infrared Sauna** (premium recovery).
+**Subcopy:** StrikeFitness is an online store for fitness and recovery tech — ankle monitors, smartwatches, rings, swim wearables, hydration gear, supplements, apparel, and recovery equipment including our **HeatHaven Infrared Sauna** (premium recovery).
 
 **Categories we sell:** Ankle monitors, smartwatches, hydration, supplements, apparel, equipment, recovery, swim, wearables, chest straps, and more. Full list and prices appear on the Shop page and in our catalog.
 
@@ -23,9 +23,10 @@ We focus on sensors and gear that match real training — not only wrist-based s
 
 ## Contact
 
-- **Email:** support@btefitness.example.com  
-- **Phone:** +1 (555) 010-0199  
-- **Hours:** Mon–Fri 9–6 ET, Sat 10–2 ET (closed Sun)
+- **Email:** support@strikefitness.com  
+- **Phone:** +1 (800) 555-1234  
+- **Address:** 123 Fitness Way, San Francisco, CA 94102  
+- **Hours:** Mon–Fri 9am–6pm PST, Sat–Sun 10am–4pm PST
 
 ## Trust & safety (demo)
 
@@ -34,6 +35,6 @@ We focus on sensors and gear that match real training — not only wrist-based s
 
 ## Popular questions (site copy)
 
-- **What is the most expensive product?** Our catalog’s highest-priced item is the **HeatHaven Infrared Sauna**; see Shop for current price.  
-- **Where are you located?** Customer support is US-based; orders ship from our **Northeast US** fulfillment center.  
+- **What is the most expensive product?** Our catalog's highest-priced item is the **HeatHaven Infrared Sauna**; see Shop for current price.  
+- **Where are you located?** Our headquarters is in **San Francisco, CA**; orders ship from our **West Coast US** fulfillment center.  
 - **Do you ship internationally?** Not on this demo store — **US only.**

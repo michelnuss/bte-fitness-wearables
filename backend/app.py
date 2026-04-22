@@ -28,7 +28,7 @@ PRODUCTS_BY_ID: dict[int, dict] = {p["id"]: p for p in PRODUCTS}
 # ---------------------------------------------------------------------------
 # App
 # ---------------------------------------------------------------------------
-app = FastAPI(title="BTE Fitness Wearables API")
+app = FastAPI(title="StrikeFitness API")
 
 # ---------------------------------------------------------------------------
 # API Routes
@@ -304,7 +304,7 @@ def _load_text_dir(label: str, directory: Path, patterns: tuple[str, ...]) -> st
 
 def _build_system_instruction() -> str:
     intro = (
-        "You are a customer assistant for BTE Fitness Wearables. "
+        "You are a customer assistant for StrikeFitness. "
         "Answer only using the retrieved knowledge sections below (catalog, structured store data, "
         "unstructured policies/FAQ, and website snapshots). "
         "Rules: (1) For product names, prices, 'most expensive', 'cheapest', and catalog counts, "
@@ -313,8 +313,8 @@ def _build_system_instruction() -> str:
         "returns, combine catalog shipping/discount text with STRUCTURED DATA and UNSTRUCTURED FAQ. "
         "(3) Do not invent SKUs, prices, or policies. "
         "If something is not in the knowledge, say you do not have that information. "
-        "If the user asks about topics unrelated to BTE Fitness, say: "
-        "'I can only help with questions about BTE Fitness Wearables.'\n\n"
+        "If the user asks about topics unrelated to StrikeFitness, say: "
+        "'I can only help with questions about StrikeFitness.'\n\n"
     )
 
     catalog = _KNOWLEDGE_TEXT or "(No catalog loaded.)"

@@ -665,11 +665,49 @@ main {
 .site-footer {
   background: var(--clr-surface);
   border-top: 1px solid var(--clr-border);
-  text-align: center;
-  padding: 1.5rem;
-  font-size: .85rem;
+  padding: 2.5rem 1.5rem 1.25rem;
+  font-size: .9rem;
   color: var(--clr-text-light);
   margin-top: auto;
+}
+
+.footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.footer-col h4 {
+  margin: 0 0 .75rem;
+  font-size: 1rem;
+  color: var(--clr-text);
+}
+
+.footer-col p {
+  margin: .35rem 0;
+  line-height: 1.5;
+}
+
+.footer-col a {
+  color: var(--clr-text-light);
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: .8rem;
 }
 
 /* --- Loading Spinner --- */

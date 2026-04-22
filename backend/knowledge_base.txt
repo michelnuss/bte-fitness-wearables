@@ -1,8 +1,14 @@
 ============================================================
-BTE FITNESS WEARABLES — PRODUCT CATALOG
+STRIKEFITNESS — PRODUCT CATALOG
 ============================================================
 
-BTE Fitness Wearables is an online store selling 20 fitness and wellness products. Our flagship product is the AnkleTrack Pro, an ankle-worn fitness monitor. We also sell smartwatches, recovery equipment, supplements, smart rings, chest straps, and more.
+StrikeFitness is an online store selling 20 fitness and wellness products. Our flagship product is the AnkleTrack Pro, an ankle-worn fitness monitor. We also sell smartwatches, recovery equipment, supplements, smart rings, chest straps, and more.
+
+CONTACT INFORMATION:
+- Email: support@strikefitness.com
+- Phone: +1 (800) 555-1234
+- Address: 123 Fitness Way, San Francisco, CA 94102
+- Hours: Mon–Fri 9am–6pm PST, Sat–Sun 10am–4pm PST
 PRICING NOTE: The highest-priced item in this catalog is HeatHaven Infrared Sauna at $3299.99.
 
 SHIPPING INFORMATION:
@@ -23,7 +29,7 @@ DISCOUNT TIERS:
 PRODUCT: AnkleTrack Pro
 *** FLAGSHIP PRODUCT ***
 Category: Ankle Monitor
-Price: $149.99
+Price: $199.99
 Weight: 3.2 oz
 Summary: Our flagship rechargeable smart ankle fitness monitor with app-controlled tracking, GPS, and biomechanics analysis.
 Details: The AnkleTrack Pro is our premium ankle-worn fitness monitor designed to capture data that wrist wearables miss. Rechargeable via USB-C, it tracks steps, distance, elevation changes, ankle rotation angles, gait symmetry, and ground contact time. Built-in GPS provides accurate route mapping for runners and hikers. The companion app lets you control settings, view real-time stats, and set custom goals. Water-resistant to 50m with a 10-day battery life. Includes a medical-grade accelerometer for fall detection and post-injury rehabilitation tracking.
